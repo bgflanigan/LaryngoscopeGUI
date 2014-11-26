@@ -52,7 +52,6 @@ public class TimerPane extends JPanel {
 			elapsedTime += dt;
 		}
 		lastSampleTime = currentTime;
-		
 	}
 }
 

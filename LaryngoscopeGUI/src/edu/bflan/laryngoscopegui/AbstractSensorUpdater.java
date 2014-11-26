@@ -6,7 +6,7 @@ import java.util.Map;
 public abstract class AbstractSensorUpdater implements SensorUpdater, Runnable{
 	private Map<Character, Sensor> sensors = new HashMap<>();
 	private Thread updateThread;
-	private boolean running;
+	private volatile boolean running;
 	@Override
 	public void registerSensor(Sensor toAdd) {
 		assert (!sensors.containsKey(toAdd.getIdentifier()));
@@ -24,6 +24,7 @@ public abstract class AbstractSensorUpdater implements SensorUpdater, Runnable{
 	public final void start() {
 		assert (updateThread == null);
 		updateThread = new Thread(this);
+		updateThread.setDaemon(true);
 		running = true;
 		updateThread.start();
 	}

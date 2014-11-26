@@ -1,0 +1,29 @@
+#to add a procedure, fill in the blank template below the first procedure (direct laryngoscopy). The code will automatically be updated when you save the modified text file in the project folder.
+#to add a sensor to a particular procedure, simply add a sensor in the same format as those above it with its char identifier in descending order. You will also need to change the arduino code.
+
+procedure:Direct Laryngoscopy
+sensor:a:Back of Esophagus:1
+sensor:b:Hypopharynx:1
+sensor:c:Left Vocal Cord:1
+sensor:d:Right Vocal Cord:1
+sensor:e:Carina:1
+sensor:f:Front of Esophagus:1
+sensor:g:Epiglottis:1
+sensor:h:Vallecula:1
+
+procedure:Half Laryngoscopy
+sensor:a:Back of Esophagus:1
+sensor:b:Hypopharynx:1
+sensor:c:Left Vocal Cord:1
+sensor:d:Right Vocal Cord:1
+
+#procedure:<name>
+#sensor:a:Back of Esophagus:<threshold>
+#sensor:b:Hypopharynx:<threshold>
+#sensor:c:Left Vocal Cord:<threshold>
+#sensor:d:Right Vocal Cord:<threshold>
+#sensor:e:Carina:<threshold>
+#sensor:f:Front of Esophagus:<threshold>
+#sensor:g:Epiglottis:<threshold>
+#sensor:h:Vallecula:<threshold>
+

@@ -5,6 +5,7 @@ public class Sensor {
 	private float currentForce = 0;
 	private String sensorName;
 	private float forceThreshold;
+	private float maxForce;
 
 	public Sensor(char identifier, String sensorName, float forceThreshold) {
 		this.identifier = identifier;
@@ -12,8 +13,10 @@ public class Sensor {
 		this.forceThreshold = forceThreshold;
 	}
 	public void setForce(float force) {
+		if (force > maxForce) {
+			maxForce = force;
+		}
 		currentForce=force;
-		System.out.println(identifier+":"+force);
 		
 	}
 
@@ -28,6 +31,9 @@ public class Sensor {
 	}
 	public float getThreshold() {
 		return forceThreshold;
+	}
+	public float getMaxForce() {
+		return maxForce;
 	}
 
 }

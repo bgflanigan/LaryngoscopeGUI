@@ -14,14 +14,14 @@ public class MockSensorUpdater extends AbstractSensorUpdater {
 	@Override
 	public void update() {
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(200);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		counter++;
 		
 		for (char c: charCodes) {
-			updateSensor(c,100*(float)(counter%c)/c);
+			updateSensor(c,22*(float)(counter%c)/c);
 		}
 		//for each character in charCodes, update force
 

@@ -41,7 +41,7 @@ public class SensorRenderer {
 		g.fillOval(-dotRadius, dotDepth-dotRadius, 2*dotRadius, 2*dotRadius);
 		g.setColor(Color.black);
 		drawCenteredString(sensor.getSensorName(),g,fontMetrics, dotLabelDepth);
-		drawCenteredString(""+force, g, fontMetrics,forceTextDepth);
+		drawCenteredString(String.format("%.2f",force), g, fontMetrics,forceTextDepth);
 	}
 	public void drawCenteredString(String text,Graphics g, FontMetrics fontMetrics, int yCoord) {
 		int textWidth = fontMetrics.stringWidth(text);
