@@ -108,6 +108,7 @@ public class DeviceSensorUpdater extends AbstractSensorUpdater{
     }  
 	
 	public CommPortIdentifier getArduinoPort() {
+		@SuppressWarnings("rawtypes")
 		Enumeration ports = CommPortIdentifier.getPortIdentifiers();
 		while (ports.hasMoreElements()) {
 			CommPortIdentifier port = (CommPortIdentifier)ports.nextElement();

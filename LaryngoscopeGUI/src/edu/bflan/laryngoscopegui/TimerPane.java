@@ -8,13 +8,16 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 public class TimerPane extends JPanel {
+
+	private static final long serialVersionUID = 5621220223674430466L;
+
 	long elapsedTime;
 	long lastSampleTime;
 	boolean isRunning;
 
 	@Override
 	public Dimension getPreferredSize() {
-		return new Dimension(287, 27);
+		return new Dimension(275, 27);
 	}
 	@Override
 	public void paintComponent(Graphics g) {
