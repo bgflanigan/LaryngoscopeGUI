@@ -67,8 +67,8 @@ public class RealTimeFeedbackScreen extends JFrame {
 			}
 		});
 		
-		//testUpdater = new DeviceSensorUpdater();
-		testUpdater = new MockSensorUpdater(new char[] {'a','b','c','d','e','f','g','h'});
+		testUpdater = new DeviceSensorUpdater();
+		//testUpdater = new MockSensorUpdater(new char[] {'a','b','c','d','e','f','g','h'});
 		for (Sensor s : sensors) {
 			testUpdater.registerSensor(s);
 		}

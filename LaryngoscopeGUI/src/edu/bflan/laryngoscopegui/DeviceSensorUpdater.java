@@ -37,8 +37,7 @@ public class DeviceSensorUpdater extends AbstractSensorUpdater{
 	public void update() {
 		 try {  
 	            int b;  
-	            while(true) {  
-	                  
+	        
 	                // if stream is not bound in.read() method returns -1  
 	                while((b = input.read()) != -1) {  
 	                    onReceive((byte) b);  
@@ -47,7 +46,7 @@ public class DeviceSensorUpdater extends AbstractSensorUpdater{
 	                  
 	                // wait 10ms when stream is broken and check again  
 	                Thread.sleep(10);  
-	            }  
+	            
 	        } catch (IOException e) {  
 	            e.printStackTrace();  
 	        } catch (InterruptedException e) {  
